@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:shared_preference/home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -86,7 +88,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          Get.to(Home());
+        },
+        // onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
